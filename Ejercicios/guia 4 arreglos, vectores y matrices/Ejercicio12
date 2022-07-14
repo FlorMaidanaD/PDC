@@ -1,0 +1,31 @@
+Algoritmo sin_titulo
+	Definir i,j, cant, cont, cont2 como entero
+	Definir palabra, matriz Como Caracter
+	Escribir "Ingrese una palabra de 9 digitos"
+	Leer palabra
+	cont=0
+	cont2=0
+	Dimension matriz(3,3)
+	cant<-Longitud(palabra)
+	Mientras cant>9 o cant<9 Hacer
+		Escribir "Ingrese una palabra de 9 digitos"
+		Leer palabra
+		cant<-Longitud(palabra)
+	FinMientras
+	
+	Para i<-0 Hasta 2 Hacer
+		Para j<-0 Hasta 2 Hacer
+			matriz(i,j)<-Subcadena(palabra,cont2,cont2)
+			cont=cont+1
+			cont2=cont2+1
+			Si cont>3 Entonces
+				Escribir ""
+				Escribir matriz(i,j) " " Sin Saltar
+				cont=1
+			SiNo
+				Escribir matriz(i,j) " " Sin Saltar 
+			FinSi
+		FinPara
+	FinPara
+	Escribir ""
+FinAlgoritmo
